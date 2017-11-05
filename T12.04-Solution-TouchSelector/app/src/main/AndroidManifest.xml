@@ -34,6 +34,9 @@
             android:name=".ColorFontActivity"
             android:label="@string/color_font_name" />
 
+        <activity
+            android:name=".ColorFontActivity2"
+            android:label="@string/color_font_name" />
 
         <activity
             android:name=".StyleActivity"
@@ -48,6 +51,21 @@
             android:label="@string/touch_selectors_name" />
 
         <activity android:name=".PenSample2_5_SaveFile"
+            android:label="PenSample2_5_SaveFile"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".PenSample5_7_Signature"
+            android:label="PenSample2_5_SaveFile"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".PenSample5_7_SignatureRegistration"
+            android:label="PenSample2_5_SaveFile"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".PenSample5_7_SignatureVerification"
             android:label="PenSample2_5_SaveFile"
             android:configChanges="locale|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize">
         </activity>
