@@ -21,16 +21,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryLight"
+            tools:context="com.example.android.visualpolish.MainActivity">
+
     <ImageView
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/person_icon"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
         android:src="@drawable/carplan" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/colorAndFont"
         style="@style/ActivityLabelStyle"
@@ -40,13 +53,13 @@
     <ImageView
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/roomplan"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/style"
         style="@style/ActivityLabelStyle"
@@ -56,13 +69,13 @@
     <ImageView
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/printerplan"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/responsiveLayouts"
         style="@style/ActivityLabelStyle"
@@ -72,18 +85,19 @@
     <ImageView
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/monitor_plan"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/touchSelector"
         style="@style/ActivityLabelStyle"
         android:text="@string/touch_selectors_name" />
 
+        </LinearLayout>
 </ScrollView>
 
 </LinearLayout>
