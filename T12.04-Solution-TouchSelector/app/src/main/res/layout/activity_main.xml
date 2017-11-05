@@ -18,29 +18,55 @@
     <!-- All have the ActivityLabelStyle applied -->
 
     <ImageView
-        android:id="@+id/icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/ic_launcher" />
+        android:id="@+id/personIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/person_icon"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/carplan" />
     <TextView
         android:id="@+id/colorAndFont"
         style="@style/ActivityLabelStyle"
         android:text="@string/color_font_name" />
 
+
+    <ImageView
+        android:id="@+id/personIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/carplan"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:contentDescription="@string/person_icon"/>
     <TextView
         android:id="@+id/style"
         style="@style/ActivityLabelStyle"
         android:text="@string/style_name" />
 
+
+    <ImageView
+        android:id="@+id/personIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/carplan"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:contentDescription="@string/person_icon"/>
     <TextView
         android:id="@+id/responsiveLayouts"
         style="@style/ActivityLabelStyle"
         android:text="@string/responsive_layout_name" />
 
+
+    <ImageView
+        android:id="@+id/personIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/carplan"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:contentDescription="@string/person_icon"/>
     <TextView
         android:id="@+id/touchSelector"
         style="@style/ActivityLabelStyle"
