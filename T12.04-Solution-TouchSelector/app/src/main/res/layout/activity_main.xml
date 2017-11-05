@@ -17,6 +17,10 @@
     <!-- Text views for each of our listed activities -->
     <!-- All have the ActivityLabelStyle applied -->
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
@@ -26,6 +30,8 @@
         android:paddingRight="4dp"
         android:src="@drawable/carplan" />
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/colorAndFont"
         style="@style/ActivityLabelStyle"
         android:text="@string/color_font_name" />
@@ -35,11 +41,13 @@
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/carplan"
-        android:paddingRight="ter4dp"
+        android:src="@drawable/roomplan"
+        android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/style"
         style="@style/ActivityLabelStyle"
         android:text="@string/style_name" />
@@ -49,11 +57,13 @@
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/carplan"
+        android:src="@drawable/printerplan"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/responsiveLayouts"
         style="@style/ActivityLabelStyle"
         android:text="@string/responsive_layout_name" />
@@ -63,13 +73,17 @@
         android:id="@+id/personIcon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/carplan"
+        android:src="@drawable/monitor_plan"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/touchSelector"
         style="@style/ActivityLabelStyle"
         android:text="@string/touch_selectors_name" />
+
+</ScrollView>
 
 </LinearLayout>
