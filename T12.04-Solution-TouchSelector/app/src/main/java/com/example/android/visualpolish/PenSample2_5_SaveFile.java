@@ -17,6 +17,7 @@ import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -576,7 +577,41 @@ public class PenSample2_5_SaveFile extends Activity {
             mSpenSurfaceView.closeControl();
 
             closeSettingView();
-            saveNoteFile(false);
+            //saveNoteFile(false);
+
+            File filePath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/SPen/");
+            if (!filePath.exists()) {
+                if (!filePath.mkdirs()) {
+                    Toast.makeText(mContext, "Save Path Creation Error", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            }
+            String saveFilePath = filePath.getPath() + '/';
+            String fileName = "note";
+            saveFilePath += "note.png";
+            captureSpenSurfaceView(saveFilePath);
+            Intent data = new Intent();
+            data.setData(Uri.parse(saveFilePath));
+            setResult(RESULT_OK, data);
+            finish();
+            /*
+            if (!fileName.equals("")) {
+                saveFilePath += fileName;
+                int checkedRadioButtonId = selectFileExt.getCheckedRadioButtonId();
+                if (checkedRadioButtonId == R.id.radioNote) {
+                    saveFilePath += ".spd";
+                    saveNoteFile(saveFilePath);
+                } else if (checkedRadioButtonId == R.id.radioImage) {
+                    saveFilePath += ".png";
+                    captureSpenSurfaceView(saveFilePath);
+                } else {
+                }
+                if (isClose) {
+                    finish();
+                }
+            } else {
+                Toast.makeText(mContext, "Invalid filename !!!", Toast.LENGTH_LONG).show();
+            }*/
         }
     };
 

@@ -9,6 +9,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -28,6 +29,7 @@ public class ColorFontActivity extends AppCompatActivity {
     static final int REQUEST_TAKE_PHOTO = 1;
     static final int IMAGE_EDIT = 2;
     String mCurrentPhotoPath;
+    ImageView imgStuff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,17 +44,7 @@ public class ColorFontActivity extends AppCompatActivity {
             }
         });
 
-
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
-
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-                Toast.makeText(ColorFontActivity.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+        imgStuff = (ImageView)findViewById(R.id.imgStuff);
 
     }
 
@@ -79,44 +71,16 @@ public class ColorFontActivity extends AppCompatActivity {
             startActivityForResult(editPhoto, IMAGE_EDIT);
 
         }
-    }
+        else if (requestCode == IMAGE_EDIT && resultCode == RESULT_OK) {
+            //Bundle extras = data.getExtras();
+            //Bitmap imageBitmap = (Bitmap) extras.get("data");
+            //mImageView.setImageBitmap(imageBitmap);
 
-    public class ImageAdapter extends BaseAdapter {
-        private Context mContext;
-
-        public ImageAdapter(Context c) {
-            mContext = c;
-        }
-
-        public int getCount() {
-            return 0;
-        }
-
-        public Object getItem(int position) {
-            return null;
-        }
-
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        // create a new ImageView for each item referenced by the Adapter
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imageView;
-            if (convertView == null) {
-                // if it's not recycled, initialize some attributes
-                imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setPadding(8, 8, 8, 8);
-            } else {
-                imageView = (ImageView) convertView;
-            }
-
-            //imageView.setImageResource(mThumbIds[position]);
-            return imageView;
+            Log.e("stuff", data.getData().toString());
+            imgStuff.setImageURI(data.getData());
         }
     }
+
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
