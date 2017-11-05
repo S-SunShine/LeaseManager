@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         colorAndFont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Intent numbersIntent = new Intent(MainActivity.this, ColorFontActivity.class);
                 Intent numbersIntent = new Intent(MainActivity.this, ColorFontActivity.class);
                 startActivity(numbersIntent);
             }
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         responsiveLayouts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Intent familyIntent = new Intent(MainActivity.this, ResponsiveLayoutActivity.class);
                 Intent familyIntent = new Intent(MainActivity.this, ResponsiveLayoutActivity.class);
                 startActivity(familyIntent);
             }
