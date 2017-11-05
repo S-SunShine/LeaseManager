@@ -11,10 +11,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.visualpolish.ColorFontActivity">
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/imgplan"
+        android:clickable="true"
+        android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:paddingBottom="8dp"
         android:src="@drawable/carplan"
         android:gravity="center"
@@ -24,10 +26,22 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sample_title"
+        android:text="@string/photos"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:paddingBottom="4dp"/>
 
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
 </LinearLayout>

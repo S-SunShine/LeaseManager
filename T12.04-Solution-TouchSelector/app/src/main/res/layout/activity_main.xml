@@ -47,7 +47,7 @@
 
 
     <ImageView
-        android:id="@+id/personIcon"
+        android:id="@+id/person4Icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/roomplan"
@@ -63,7 +63,7 @@
 
 
     <ImageView
-        android:id="@+id/personIcon"
+        android:id="@+id/person2Icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/printerplan"
