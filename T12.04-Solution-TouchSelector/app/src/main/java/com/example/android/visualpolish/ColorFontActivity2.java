@@ -1,8 +1,6 @@
 package com.example.android.visualpolish;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,12 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class ColorFontActivity extends AppCompatActivity {
+public class ColorFontActivity2 extends AppCompatActivity {
 
     static final int REQUEST_TAKE_PHOTO = 1;
     static final int IMAGE_EDIT = 2;
@@ -37,7 +30,7 @@ public class ColorFontActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.color_font_activity);
+        setContentView(R.layout.color_font_activity2);
 
         findViewById(R.id.imgplan).setOnClickListener(new View.OnClickListener(){
 
@@ -121,28 +114,5 @@ public class ColorFontActivity extends AppCompatActivity {
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
         return image;
-    }
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.submit, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.new_game:
-                Intent intent = new Intent(this, PenSample5_7_SignatureVerification.class);
-                startActivity(intent);
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 }

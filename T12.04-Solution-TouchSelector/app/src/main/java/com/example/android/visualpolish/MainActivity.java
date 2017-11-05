@@ -3,6 +3,9 @@ package com.example.android.visualpolish;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Intent numbersIntent = new Intent(MainActivity.this, ColorFontActivity.class);
-                Intent numbersIntent = new Intent(MainActivity.this, ColorFontActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, ColorFontActivity2.class);
                 startActivity(numbersIntent);
             }
         });
@@ -57,5 +60,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(colorsIntent);
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.new_game:
+                Intent intent = new Intent(this, ColorFontActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
