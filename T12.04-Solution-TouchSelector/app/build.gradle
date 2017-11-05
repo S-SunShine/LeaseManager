@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.android.visualpolish"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -15,12 +15,31 @@ android {
             minifyEnabled false
         }
     }
+    splits{
+        abi{
+            enable true
+            reset()
+            include 'armeabi-v7a'
+        }
+    }
 }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
+
+dependencies {
+    compile files('libs/jsoup-1.8.3.jar')
+    compile files('libs/sdk-v1.0.0.jar')
+    fileTree(dir: 'libs', include: '*.aar').each {
+        File file ->dependencies.add("compile", [name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name }, ext: 'aar'])
+    }
     // for RecyclerView
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:support-annotations:25.0.0'
+
 }

@@ -32,11 +32,11 @@
 
 
     <ImageView
-        android:id="@+id/personIcon"
+        android:id="@+id/person4Icon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/carplan"
-        android:paddingRight="ter4dp"
+        android:paddingRight="4dp"
         android:paddingLeft="4dp"
         android:contentDescription="@string/person_icon"/>
     <TextView
@@ -46,7 +46,7 @@
 
 
     <ImageView
-        android:id="@+id/personIcon"
+        android:id="@+id/person2Icon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/carplan"
@@ -60,7 +60,7 @@
 
 
     <ImageView
-        android:id="@+id/personIcon"
+        android:id="@+id/person3Icon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/carplan"
